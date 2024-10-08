@@ -1,0 +1,6 @@
+[
+    {
+        "input": ["hi", "hello", "how are you", "good afternoon", "good morning"],
+        "output": ["hello, how can I help you today", "hi, good to hear you. Please tell me something", "hello, I am happy to hear your voice"]
+    }
+]
