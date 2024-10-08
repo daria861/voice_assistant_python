@@ -18,16 +18,18 @@ def main():
     with sr.Microphone() as source:
         
         say("Hello, I am your voice assistant. How can I help you?")
-        engine.runAndWait()
         
         while True:
-            
+            engine.runAndWait()
             print("Say something! Listening.........")
             audio = recognizer.listen(source, timeout=5, phrase_time_limit=5)
             
             #try-except errors
             try:
                 text = recognizer.recognize_google(audio, language='en-GB')
+                if text.lower() == "hello":
+                    say("Hi, how are you doing")
+                    
                 print(f"You said: {text}")
             except sr.UnknownValueError:
                 print("Audio is not recognized")   
