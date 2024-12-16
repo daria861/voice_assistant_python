@@ -2,6 +2,7 @@ import speech_recognition as sr
 from output import say, engine
 import json
 import random
+from functions import * 
 
 
 
@@ -10,16 +11,26 @@ def load_speech():
         data = json.load(file)
     return data
 
-data = load_speech()
 
 def speech_commands(text:str):
+    data = load_speech()
+    result = False
     for phrase in data:
         for input_words in phrase['input']:
             if input_words in text.lower():
                 output = random.choice(phrase['output'])
+                function_name = phrase.get("function")
+                print(function_name)
+                if function_name:
+                    func = globals().get(function_name)
+                    if func:
+                        output_func = func(text)
+                        for key in output_func.keys():
+                            output = output.replace(f'[{key}]', str(output_func[key]))
                 say(output)
                 print(output)
-            
+                result = True
+    return result
 
 # obtain audio from the microphone
 def main():
@@ -28,7 +39,6 @@ def main():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         
-        # say("Hello, I am your voice assistant. How can I help you?")
         
         while True:
             engine.runAndWait()
@@ -40,8 +50,15 @@ def main():
                 text = recognizer.recognize_google(audio, language='en-GB')
                 print(f"You said: {text}")
                 speech_commands(text)
+                
             except sr.UnknownValueError:
-                print("Audio is not recognized")   
+                print("Audio is not recognized")
+                variants = [
+                        "I don't understand you",
+                        "Sorry, I did not get it",
+                        "Repeat, please"
+                    ]
+                say(random.choice(variants)) 
             except sr.RequestError:
                 print("request error")       
             except sr.WaitTimeoutError:

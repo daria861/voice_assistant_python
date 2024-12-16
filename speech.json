@@ -2,5 +2,105 @@
     {
         "input": ["hi", "hello", "how are you", "good afternoon", "good morning"],
         "output": ["hello, how can I help you today", "hi, good to hear you. Please tell me something", "hello, I am happy to hear your voice"]
+    },
+    {
+        "input": ["thank you", "thanks", "thank you for help"],
+        "output": ["i was happy to help", "you are welcome", "i am here for you", "happy to be your assistant"]
+    },
+    {
+        "input": ["movie you recommend", "watch tonight", "movie for tonight"],
+        "output": ["harry potter", "The Lord of the Rings", "The Godfather", "Forrest Gump", "Fight Club", "The Matrix"]
+    },
+    {
+    "input": ["what's your name", "who are you", "what do I call you", "tell me your name"],
+    "output": ["I am your friendly voice assistant.", "You can call me your assistant.", "I'm your personal assistant.", "I'm here to assist you."]
+    },
+    {
+    "input": ["tell me a joke", "make me laugh", "do you know any jokes", "I want to hear a joke"],
+    "output": ["Why don't skeletons fight each other? They don't have the guts!", "Why did the scarecrow win an award? Because he was outstanding in his field!", "I'm reading a book on anti-gravity. It's impossible to put down!", "Want to hear a joke about construction? I'm still working on it."]
+    },
+    {
+    "input": ["remind me", "set a reminder", "you remind me", "reminder for me"],
+    "output": ["What should I remind you about?", "Tell me the details of your reminder.", "Sure, what's the reminder?", "Let me know when and what to remind you about."]
+    },
+    {
+    "input": ["who is your favorite singer", "do you have a favorite artist", "favorite musician", "who do you listen to"],
+    "output": ["I don't have favorites, but I hear Adele has a voice that never disappoints.", "People say Beyoncé is hard to beat.", "Ed Sheeran is a popular choice these days.", "I hear a lot of love for Taylor Swift."]
+    },
+    {
+        "input": ["can you recommend a book", "what book should I read", "suggest me a book", "any book recommendations"],
+        "output": ["How about starting with *1984* by George Orwell?", "You might enjoy *To Kill a Mockingbird* by Harper Lee.", "Have you tried reading *Sapiens* by Yuval Noah Harari?", "I'd recommend *The Alchemist* by Paulo Coelho, it's a classic."]
+    },
+    {
+        "input": ["give me life advice", "can you give me advice", "I need advice", "help me with a life tip"],
+        "output": ["Remember, it's okay to take breaks. You don't have to be productive all the time.", "Consistency beats perfection. Show up every day, even in small ways.", "Sometimes, the best decision is to say no and set boundaries.", "Don't be afraid of failure. It's just a step toward success."]
+    },
+    {
+        "input": ["how to be productive", "productivity tips", "help me be more productive", "tips to improve focus"],
+        "output": ["Try breaking your tasks into smaller, manageable chunks.", "The Pomodoro technique can really help with focus. Work for 25 minutes, then take a 5-minute break.", "Create a to-do list every morning to organize your day.", "Limit distractions by putting your phone away while working."]
+    },
+    {
+        "input": ["how to relax", "I feel stressed", "help me relax", "give me relaxation tips"],
+        "output": ["Try deep breathing exercises. Inhale for four counts, hold for four, and exhale for four.", "A short walk outside might help clear your mind.", "Listening to calming music or nature sounds can be very soothing.", "Sometimes, a cup of herbal tea and a few quiet moments can do wonders."]
+    },
+    {
+        "input": ["what is your favorite book", "do you read", "any books you like", "what's a book you recommend"],
+        "output": ["I don't read in the traditional sense, but I've heard *Pride and Prejudice* is a timeless favorite.", "A lot of people rave about *The Great Gatsby*.", "You can't go wrong with *The Catcher in the Rye*.", "I hear *Becoming* by Michelle Obama is inspiring."]
+    },
+    {
+        "input": ["should I work out today", "should I exercise", "should I go to the gym", "is today a good day to work out"],
+        "output": ["If you're feeling up for it, even a short workout can boost your energy!", "Why not? Even 15 minutes of exercise can make a difference.", "Listen to your body, but staying active regularly is a great habit.", "A quick workout can improve your mood and help you feel accomplished."]
+    },
+    {
+        "input": ["what should I eat today", "suggest a meal", "any food recommendations", "what do you suggest for dinner"],
+        "output": ["How about a healthy salad with some grilled chicken?", "Maybe try something simple, like pasta with fresh veggies.", "How about a warm bowl of soup? It’s comforting and nutritious.", "A stir-fry with your favorite veggies could be a quick and tasty option."]
+    },
+    {
+        "input": ["how to start the day", "morning routine tips", "what should I do in the morning", "morning advice"],
+        "output": ["Start with a glass of water to hydrate after sleeping.", "A quick stretch or yoga can help wake up your body.", "Writing down your goals for the day can help you stay focused.", "Don’t skip breakfast, it’s the fuel you need to kickstart your day."]
+    },
+    {
+        "input": ["give me advice on happiness", "how to be happy", "what's the secret to happiness", "advice for living a good life"],
+        "output": ["Focus on the present moment. Worrying about the future won't change it.", "Surround yourself with positive people who lift you up.", "Gratitude is key. Take a moment to appreciate the little things.", "Happiness often comes from within. Start by being kind to yourself."]
+    },
+    {
+        "input": ["any good podcasts", "suggest a podcast", "what should I listen to", "podcast recommendations"],
+        "output": ["You might enjoy *The Daily* for news updates.", "*How I Built This* has inspiring stories of entrepreneurs.", "If you're into true crime, *Serial* is a great listen.", "*Stuff You Should Know* is perfect for learning random but fascinating facts."]
+    },
+    {
+        "input": ["what can I do for fun", "give me some fun ideas", "what should I do in my free time", "how to spend my free time"],
+        "output": ["Try picking up a new hobby, like painting or gardening.", "How about going for a hike and enjoying nature?", "You could start learning a new language or skill online.", "A fun way to pass time is watching a documentary or reading a book."]
+    },
+    {
+        "input": ["what time is it", "what time now", "time at the moment"],
+        "output": ["It is [time]", "Now is [time]"],
+        "function": "get_time"
+    },
+    {
+        "input": ["random number"],
+        "output": ["yes, your random number is [number]", "here you go, your number is [number]", "here your random number [number]"],
+        "function": "get_random_number"
+    },
+     {
+        "input": ["flip a coin", "flip coin", "coin flip", "toss coin", "coin side"],
+        "output": [
+            "The winner is [winner_side] and the loser is [loser_side].",
+            "It's [winner_side]! The other side is [loser_side].",
+            "[winner_side] wins! [loser_side] loses this time.",
+            "Coin toss result: [winner_side]."
+        ],
+        "function": "get_random_flip"
+    },
+   {
+    "input": ["dollar rate", "what is the dollar rate", "current dollar rate", "how much is dollar"],
+    "output": [
+        "You need to give [uah_rate] hryvnias and [coin_rate] coins for 1 dollar."
+    ],
+    "function": "get_dollar_rate"
+    },
+    {
+        "input": ["let's play", "play with me", "i want play", "play game"],
+        "output": ["we played cool"],
+        "function": "game"
     }
 ]
